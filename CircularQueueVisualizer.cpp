@@ -34,6 +34,26 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
      for(int i = 0; i < capacity; i++){
         if(occupied[i]){
             cout << " " << setw(4) << data[i] << " ";
+        } else {
+            cout << " [emp] ";
         }
      }
+     cout << "\n";
+
+     //printing front and rear 
+     for(int i = 0; i < capacity; i++){
+        if(i == frontIndex && i == rearIndex){
+            cout << " F/R ";
+        } else if (i == frontIndex){
+            cout << "Front";
+        } else if (i == rearIndex){
+            cout << "Rear";
+        } else {
+            cout << "  ";
+        }
+     }
+     cout << "\n";
  }
+
+ //enqueuing 
+ void
