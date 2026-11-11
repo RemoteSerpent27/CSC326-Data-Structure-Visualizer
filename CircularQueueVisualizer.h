@@ -3,6 +3,8 @@
 
 #include <vector>
 
+class CircularQueueVisualizer{
 
+}
 
 #endif CIRCULAR_QUEUE_VISUALIZER_H
