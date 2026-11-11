@@ -110,7 +110,7 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
     cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
  }
 
- void CircularQueueVisualzuer::runMenu(){
+ void CircularQueueVisualizer::runMenu(){
     int choice = 0;
     while (choice != 5){
         need::printDivider();
