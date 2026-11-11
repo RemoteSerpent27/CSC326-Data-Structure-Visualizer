@@ -26,6 +26,8 @@ namespace need{
               }
               } else{
                 std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                std::cout << "[ERROR] Invalid inputm enter a valid integer \n";
               }  
             }
         }
