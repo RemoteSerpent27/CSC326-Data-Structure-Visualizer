@@ -1,5 +1,5 @@
-#ifndef need.h
-#define need.h
+#ifndef NEED_H
+#define NEED_H
 
 #include <iostream>
 #include <string>
@@ -41,4 +41,4 @@ namespace need{
     }
 
 
-#endif need.h
+#endif NEED_H
