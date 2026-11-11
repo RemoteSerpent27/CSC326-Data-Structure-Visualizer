@@ -14,6 +14,15 @@ private:
 
  public:
   explicit CircularQueueVisualizer(int cap = 5);
-}
+  bool empty() const;
+  bool full() const;
+  int size() const;
+
+  void enqueue(int value);
+  void dequeue();
+  void front() const;
+  void display() const;
+  void runMenu();
+  };
 
 #endif CIRCULAR_QUEUE_VISUALIZER_H
