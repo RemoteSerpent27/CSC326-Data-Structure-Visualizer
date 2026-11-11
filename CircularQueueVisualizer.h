@@ -13,7 +13,7 @@ private:
  int capacity;
 
  public:
-  explicit CircularQueueVisualizer(int size);
+  explicit CircularQueueVisualizer(int cap = 5);
 }
 
 #endif CIRCULAR_QUEUE_VISUALIZER_H
