@@ -81,4 +81,13 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
  void CircularQueueVisualizer::dequeue() {
     cout << "\n--- Before Dequeue() ---";
     display();
+
+    if(empty()){
+        cout << "[Underflow Error] Queue is currently empty, nothing to dequeue \n";
+        cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
+        return;
+    }
+
+    int oldFront = frontIndex;
+    int removedVal = data[frontIndex];
  }
