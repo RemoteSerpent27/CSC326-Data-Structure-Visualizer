@@ -25,4 +25,4 @@ private:
   void runMenu();
   };
 
-#endif CIRCULAR_QUEUE_VISUALIZER_H
+#endif 
