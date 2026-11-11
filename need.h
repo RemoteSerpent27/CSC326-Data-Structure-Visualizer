@@ -6,14 +6,17 @@
 #include <limits>
 
 namespace need{
-    inline int getValidInt(const std::string& prompt, int minVal, int MaxVal){
+    inline int getValidInt(const std::string& prompt, int minVal, int maxVal){
         int value;
         while (true) {
             std::cout << prompt;
-            if(std:: cin >> value){
+            if(std::cin >> value){
               if(std::cin.peek() = '\n' || std::cin.peek() == EOF)//checks if theres extra characters
               {
-                std::cin.ignore(std::numeric_limits<std)
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                if(value >= minVal && value <= maxVal){
+                    return value;
+                }
               }  
             }
         }
