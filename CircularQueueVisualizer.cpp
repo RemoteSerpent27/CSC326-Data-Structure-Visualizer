@@ -96,5 +96,13 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
 
     cout << "\n[STEP] Removed " << removedVal << " from index " << oldFront
      << ", wrapped frontIndex: (" << oldFront << " + 1) %" << capacity << " = " << frontIndex << "\n"; 
-     
+     cout << "--- AFTER DEQUEUE() ---";
+     display();
+     cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
+ }
+
+ void CircularQueueVisualizer::front() const {
+    if(empty()){
+        
+    }
  }
