@@ -90,4 +90,7 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
 
     int oldFront = frontIndex;
     int removedVal = data[frontIndex];
+    occupied[frontIndex] = false;
+    frontIndex = (frontIndex + 1) % capacity;
+    count--;
  }
