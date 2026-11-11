@@ -65,4 +65,9 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
         cout << "Complexity: O(1) | Auxiliary Space O(1)\n";
         return;
     }
+    int oldRear = rearIndex;
+    data[rearIndex] = value;
+    occupied[rearIndex] = true;
+    rearIndex = (rearIndex + 1) % capacity;
+    count++;
  }
