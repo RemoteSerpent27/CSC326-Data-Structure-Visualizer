@@ -56,4 +56,7 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
  }
 
  //enqueuing 
- void
+ void CircularQueueVisualizer::enqueue(int value){
+    cout << "\n--- Before Enqueue(" << value << ") ---";
+    display();
+ }
