@@ -11,7 +11,10 @@ namespace need{
         while (true) {
             std::cout << prompt;
             if(std:: cin >> value){
-                
+              if(std::cin.peek() = '\n' || std::cin.peek() == EOF)//checks if theres extra characters
+              {
+                std::cin.ignore(std::numeric_limits<std)
+              }  
             }
         }
     }
