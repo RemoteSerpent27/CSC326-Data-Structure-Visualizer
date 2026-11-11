@@ -1,4 +1,8 @@
 #ifndef CIRCULAR_QUEUE_VISUALIZER_H
 #define CIRCULAR_QUEUE_VISUALIZER_H
 
+#include <vector>
+
+
+
 #endif CIRCULAR_QUEUE_VISUALIZER_H
