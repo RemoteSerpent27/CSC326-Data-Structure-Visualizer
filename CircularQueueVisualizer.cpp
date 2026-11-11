@@ -103,6 +103,13 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
 
  void CircularQueueVisualizer::front() const {
     if(empty()){
-        
+        cout << "\n[Underflow Error] Queue is empty. No front element.\n";
+    } else {
+        cout << "\nFront element (at index " << frontIndex << "): " << data[frontIndex] << "\n";
     }
+    cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
+ }
+
+ void CircularQueueVisualzuer::runMenu(){
+    
  }
