@@ -93,4 +93,8 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
     occupied[frontIndex] = false;
     frontIndex = (frontIndex + 1) % capacity;
     count--;
+
+    cout << "\n[STEP] Removed " << removedVal << " from index " << oldFront
+     << ", wrapped frontIndex: (" << oldFront << " + 1) %" << capacity << " = " << frontIndex << "\n"; 
+     
  }
