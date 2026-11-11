@@ -111,5 +111,16 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
  }
 
  void CircularQueueVisualzuer::runMenu(){
-    
+    int choice = 0;
+    while (choice != 5){
+        need::printDivider();
+        cout << "  Ciruclar Array Queue Visualizer (Capcity = " << capacity << ")\n";
+        need::printDivider();
+        cout << "1. Enqueue (Insert at Rear)\n";
+        cout << "2,Dequeue (Removes from the front)\n";
+        cout << "3.Front (Peek Oldest Element)\n";
+        cout << "4. Display Queue\n";
+        cout << "5. Back to Main Menu\n";
+        need::printDivider();
+    }
  }
