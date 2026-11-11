@@ -22,8 +22,10 @@ namespace need{
               }else{
                 std::cin.clear();
                 std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-                std
+                std::cout << "[ERROR] Invalid input, whole numbers only \n";
               }
+              } else{
+                std::cin.clear();
               }  
             }
         }
