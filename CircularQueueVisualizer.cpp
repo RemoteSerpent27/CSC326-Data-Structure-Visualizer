@@ -26,6 +26,14 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
      //printing index  headers
      cout << "Index: ";
      for(int i = 0; i < capacity; i++){
-        cout < " [" << i << " ]" ";
+        cout << " [" << i << "] "; 
+     }
+     cout << "\nValue: ";
+
+     //printing slots
+     for(int i = 0; i < capacity; i++){
+        if(occupied[i]){
+            cout << " " << setw(4) << data[i] << " ";
+        }
      }
  }
