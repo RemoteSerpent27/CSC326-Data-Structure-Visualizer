@@ -122,5 +122,27 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
         cout << "4. Display Queue\n";
         cout << "5. Back to Main Menu\n";
         need::printDivider();
+
+        choice = need::getValidInt("Choose a operation (1-5): ", 1, 5);
+
+        switch(choice){
+            case 1:{
+                int val = need::getAnyInt("Enter integer values to enqueue: ");
+                enqueue(val);
+                break;
+            }
+            case 2:
+                dequeue();
+                break;
+            case 3:
+                front();
+                break;
+            case 4:
+                display();
+                break;
+            case 5:
+            cout << "Returning to Main Menu..\n";
+            break;
+        }
     }
  }
