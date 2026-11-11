@@ -2,10 +2,22 @@
 #include "need.h"
 #include <iostream>
 #include <iomanip>
-
+using namespace std;
 CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
  data(cap, 0), occupied(cap, false), frontIndex(0), rearIndex(0), count(0), capacity(cap) {}
 
  bool CircularQueueVisualizer::empty() const{
     return count == 0;
+ }
+
+ bool CircularQueueVisualizer::full() const{
+    return count == capacity;
+ }
+
+ int CircularQueueVisualizer::size() const{
+    return count;
+ }
+
+ void CircularQueueVisualizer::display() const{
+    cout << "\n Queue State (count = " << )"
  }
