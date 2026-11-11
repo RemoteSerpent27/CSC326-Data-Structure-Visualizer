@@ -78,4 +78,7 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
     cout << "Complexity: Time O(1) | Auxiliry Space O(1)\n";
  }
 
- 
+ void CircularQueueVisualizer::dequeue() {
+    cout << "\n--- Before Dequeue() ---";
+    display();
+ }
