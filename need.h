@@ -20,8 +20,9 @@ namespace need{
                 std::cout << "[ERROR] Please enter a number betweem " 
                             <<minVal << " and " << maxVal << ".\n";
               }else{
-                std>>cin.clear();
-                std
+                std::cin.clear();
+                std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                
               }
               }  
             }
