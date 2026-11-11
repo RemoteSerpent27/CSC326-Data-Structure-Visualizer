@@ -31,10 +31,13 @@ namespace need{
               }  
             }
         }
+        //function getAnyInt to read any value (number wise)
         inline int getAnyInt(const std::string& prompt){
             return getValidInt(prompt, -1000000, 1000000);
         }
-        inline void
+        inline void printDivider(){
+            std::cout << "----------------------------------------\n";
+        }
     }
 
 
