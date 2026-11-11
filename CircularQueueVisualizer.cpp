@@ -19,5 +19,13 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
  }
 
  void CircularQueueVisualizer::display() const{
-    cout << "\n Queue State (count = " << )"
+    cout << "\n Queue State (count = " << count << "/" << capacity
+     << ", frontIndex = " << frontIndex
+     << ", rearIndex = " << rearIndex << "):\n";
+
+     //printing index  headers
+     cout << "Index: ";
+     for(int i = 0; i < capacity; i++){
+        cout < " [" << i << " ]" ";
+     }
  }
