@@ -70,4 +70,12 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
     occupied[rearIndex] = true;
     rearIndex = (rearIndex + 1) % capacity;
     count++;
+
+    cout << "\n[STEP] Wrote " << value << " at index " << oldRear
+         << ", wrapped rearIndex: (" << oldRear << "+ 1) % " << capacity << " = " << rearIndex << ".\n";
+    cout << "---AFTER ENQUEUE(" << value << ") ---";
+    display();
+    cout << "Complexity: Time O(1) | Auxiliry Space O(1)\n";
  }
+
+ 
