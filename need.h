@@ -17,6 +17,12 @@ namespace need{
                 if(value >= minVal && value <= maxVal){
                     return value;
                 }
+                std::cout << "[ERROR] Please enter a number betweem " 
+                            <<minVal << " and " << maxVal << ".\n";
+              }else{
+                std>>cin.clear();
+                std
+              }
               }  
             }
         }
