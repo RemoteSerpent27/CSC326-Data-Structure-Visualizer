@@ -7,7 +7,13 @@ class CircularQueueVisualizer{
 private:
  std::vector<int> data;
  std::vector<bool> occupied;
- 
+ int frontIndex; 
+ int rearIndex;
+ int count;
+ int capacity;
+
+ public:
+  explicit CircularQueueVisualizer(int size);
 }
 
 #endif CIRCULAR_QUEUE_VISUALIZER_H
