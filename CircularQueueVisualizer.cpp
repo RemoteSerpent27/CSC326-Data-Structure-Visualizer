@@ -59,4 +59,10 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
  void CircularQueueVisualizer::enqueue(int value){
     cout << "\n--- Before Enqueue(" << value << ") ---";
     display();
+
+    if(full()){
+        cout << "[Overflow Error] Queue is now full, cannot enqueue " << value << ".\n";
+        cout << "Complexity: O(1) | Auxiliary Space O(1)\n";
+        return;
+    }
  }
