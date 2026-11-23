@@ -22,7 +22,7 @@ int main(){
 
     while(choice != 5){
         need::printDivider();
-        cout << " CSC-325 Data Structures Vosualizer" << endl;
+        cout << " CSC-325 Data Structures Visualizer" << endl;
     }
 
     return 0;
