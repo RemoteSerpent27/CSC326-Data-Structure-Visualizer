@@ -12,6 +12,6 @@ void runLinkedList(){
     cout << "Linked Lisr visualizer(singly) to be added" << endl;
 }
 
-void runStackMeni(){
+void runStackMenu(){
     cout << "Stack visualizer, to be added" << endl;
 }
