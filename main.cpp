@@ -33,8 +33,10 @@ int main(){
         choice = need::getValidInt("Select a option(1-5): ", 1, 5);
         switch(choice){
             case 1: runArrayMenu(); break;
-            case 2: runLinkedList(); breal;
-            case 3: runStackMenu(); break
+            case 2: runLinkedList(); break;
+            case 3: runStackMenu(); break;
+            case 4: queueVis.runMenu(); break;
+            case 5: cout << "Exiting, Goodbye." << endl; break;
         }
     }
 
