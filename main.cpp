@@ -18,6 +18,6 @@ void runStackMenu(){
 
 int main(){
     CircularQueueVisualizer queueVis(5);
-    int choice =0 0;
+    int choice = 0;
     return 0;
 }
