@@ -29,6 +29,13 @@ int main(){
         cout << "3. Stack " << endl;
         cout << "4. Circular Queue Array " << endl;
         need::printDivider();
+
+        choice = need::getValidInt("Select a option(1-5): ", 1, 5);
+        switch(choice){
+            case 1: runArrayMenu(); break;
+            case 2: runLinkedList(); breal;
+            case 3: runStackMenu(); break
+        }
     }
 
     return 0;
