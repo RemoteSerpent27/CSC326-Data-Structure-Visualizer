@@ -19,5 +19,11 @@ void runStackMenu(){
 int main(){
     CircularQueueVisualizer queueVis(5);
     int choice = 0;
+
+    while(choice != 5){
+        need::printDivider();
+        cout << " CSC-325 Data Structures Vosualizer" << endl;
+    }
+
     return 0;
 }
