@@ -15,3 +15,8 @@ void runLinkedList(){
 void runStackMenu(){
     cout << "Stack visualizer, to be added" << endl;
 }
+
+int main(){
+
+    return 0;
+}
