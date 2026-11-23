@@ -24,6 +24,11 @@ int main(){
         need::printDivider();
         cout << " CSC-325 Data Structures Visualizer" << endl;
         need::printDivider();
+        cout << "1. Array/Vector "<< endl;
+        cout << "2. Linked List(Singly) " << endl;
+        cout << "3. Stack " << endl;
+        cout << "4. Circular Queue Array " << endl;
+        need::printDivider();
     }
 
     return 0;
