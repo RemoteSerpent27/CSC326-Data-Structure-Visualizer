@@ -29,6 +29,7 @@ int main(){
         cout << "2. Linked List(Singly) " << endl;
         cout << "3. Stack " << endl;
         cout << "4. Circular Queue Array " << endl;
+        cout << "5. Exit " << endl;
         need::printDivider();
 
         choice = need::getValidInt("Select a option(1-5): ", 1, 5);
