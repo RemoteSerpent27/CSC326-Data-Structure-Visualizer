@@ -1,7 +1,8 @@
 #include <iostream>
 #include "need.h"
 #include "CircularQueueVisualizer.h"
-
+//command to start: g++ -std=c++17 main.cpp CircularQueueVisualizer.cpp -o visualizer && ./visualizer
+//command for terminal Control + `
 using namespace std;
 
 void runArrayMenu(){
