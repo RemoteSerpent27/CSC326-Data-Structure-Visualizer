@@ -75,7 +75,7 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
          << ", wrapped rearIndex: (" << oldRear << "+ 1) % " << capacity << " = " << rearIndex << ".\n";
     cout << "---AFTER ENQUEUE(" << value << ") ---";
     display();
-    cout << "Complexity: Time O(1) | Auxiliry Space O(1)\n";
+    cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
  }
 
  void CircularQueueVisualizer::dequeue() {
@@ -113,8 +113,9 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
  void CircularQueueVisualizer::runMenu(){
     int choice = 0;
     while (choice != 5){
+        cout << endl;
         need::printDivider();
-        cout << "  Ciruclar Array Queue Visualizer (Capcity = " << capacity << ")\n";
+        cout << "  Ciruclar Array Queue Visualizer (Capacity = " << capacity << ")\n";
         need::printDivider();
         cout << "1. Enqueue (Insert at Rear)\n";
         cout << "2. Dequeue (Removes from the front)\n";
