@@ -9,7 +9,7 @@ void runArrayMenu(){
 }
 
 void runLinkedList(){
-    cout << "Linked Lisr visualizer(singly) to be added" << endl;
+    cout << "Linked List visualizer(singly) to be added" << endl;
 }
 
 void runStackMenu(){
@@ -22,7 +22,7 @@ int main(){
 
     while(choice != 5){
         need::printDivider();
-        cout << " CSC-325 Data Structures Visualizer" << endl;
+        cout << " CSC-326 Data Structures Visualizer" << endl;
         need::printDivider();
         cout << "1. Array/Vector "<< endl;
         cout << "2. Linked List(Singly) " << endl;
