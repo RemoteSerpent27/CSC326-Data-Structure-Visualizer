@@ -43,11 +43,11 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
      //printing front and rear 
      for(int i = 0; i < capacity; i++){
         if(i == frontIndex && i == rearIndex){
-            cout << " F/R ";
+            cout << " F/R  ";
         } else if (i == frontIndex){
-            cout << "Front";
+            cout << " Front ";
         } else if (i == rearIndex){
-            cout << "Rear";
+            cout << " Rear  ";
         } else {
             cout << "       ";
         }
