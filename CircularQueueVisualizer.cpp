@@ -49,7 +49,7 @@ CircularQueueVisualizer::CircularQueueVisualizer(int cap) :
         } else if (i == rearIndex){
             cout << "Rear";
         } else {
-            cout << "  ";
+            cout << "       ";
         }
      }
      cout << "\n";
