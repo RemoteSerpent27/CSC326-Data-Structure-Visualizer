@@ -17,3 +17,7 @@ LinkedListVisualizer::~LinkedListVisualizer(){
 bool LinkedListVisualizer::empty() const {
     return head == nullptr;
 }
+
+int LinkedListVisualizer::size() const{
+    return count;
+}
