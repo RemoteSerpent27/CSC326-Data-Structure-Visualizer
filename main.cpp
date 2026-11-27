@@ -4,7 +4,7 @@
 #include "LinkedListVisualizer.h"
 #include "StackVisualizer.h"
 #include "CircularQueueVisualizer.h"
-//command to start: g++ -std=c++17 main.cpp LinkedListVisualizer.cpp CircularQueueVisualizer.cpp -o visualizer && ./visualizer
+//command to start: g++ -std=c++17 main.cpp ArrayVisualizer.cpp LinkedListVisualizer.cpp StackVisualizer.cpp CircularQueueVisualizer.cpp -o visualizer && ./visualizer
 //command for terminal: Control + `
 using namespace std;
 
