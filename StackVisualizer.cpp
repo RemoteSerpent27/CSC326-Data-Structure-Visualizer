@@ -113,3 +113,42 @@ void StackVisualizer::checkBalancedDeLimiters(const std::string& expression) con
     }
     cout << "Complexity: Time O(n) | Auxiliary Space O(n)\n";
 }
+
+void StackVisualizer::runMenu(){
+    int choice = 0;
+    while (choice != 6){
+        cout << "\n";
+        need::printDivider();
+        cout << "  Stack Visualizer (LIFO)\n";
+        need::printDivider();
+        cout << "1. Push (Insert at Top)\n";
+        cout << "2. Pop (Remove Top)\n";
+        cout << "3. Top (Peek Top Element)\n";
+        cout << "4. Display Stack\n";
+        cout << "5. Application: Balanced Delimiters Checker\n";
+        cout << "6. Back to Main Menu\n";
+        need::printDivider();
+
+        choice = need::getValidInt("Choose a operation(1-6) : ", 1, 6);
+
+        switch(choice){
+            case 1: {
+                int val = need::getAnyInt("Enter integer value to push:");
+                push(val);
+                break;
+            }
+            case 2: 
+                pop();
+                break;
+            case 3:
+            top();
+            break;
+            case 4:
+            display();
+            break;
+            case 5: {
+                cout << "Enter expression with brackets (eg {[()]} or  ([)]): )";
+            }
+        }
+    }
+}
