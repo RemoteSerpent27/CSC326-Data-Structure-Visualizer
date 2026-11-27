@@ -142,7 +142,44 @@ void ArrayVisualizer::runMenu(){
 
         choice = need::getValidInt("Choosee a operation (1-6): ", 1, 6);
         switch (choice){
-            
+            case 1: {
+                int idx = Utils::getValidInt("Enter index (0 to " + std::to_string(values.size()) + "): ",
+                                             0, static_cast<int>(values.size()));
+                int val = Utils::getAnyInt("Enter integer value to insert: ");
+                insertAt(idx, val);
+                break;
+            }
+            case 2: {
+                if (values.empty()) {
+                    std::cout << "\n[Underflow Error] Array is empty. Nothing to remove.\n";
+                } else {
+                    int idx = Utils::getValidInt("Enter index (0 to " + std::to_string(values.size() - 1) + "): ",
+                                                 0, static_cast<int>(values.size() - 1));
+                    removeAt(idx);
+                }
+                break;
+            }
+            case 3: {
+                if (values.empty()) {
+                    std::cout << "\n[Underflow Error] Array is empty.\n";
+                } else {
+                    int idx = Utils::getValidInt("Enter index (0 to " + std::to_string(values.size() - 1) + "): ",
+                                                 0, static_cast<int>(values.size() - 1));
+                    accessAt(idx);
+                }
+                break;
+            }
+            case 4: {
+                int val = Utils::getAnyInt("Enter integer value to search: ");
+                search(val);
+                break;
+            }
+            case 5:
+                display();
+                break;
+            case 6:
+                std::cout << "Returning to Main Menu...\n";
+                break;
         }
     }
 }
