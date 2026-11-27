@@ -53,4 +53,16 @@ void StackVisualizer::pop(){
 
     cout << "\n[Step] Popped " << removedVal << " from top of stack.\n";
     cout << "--- AFTER POP() ---";
+    display();
+    cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
 }
+
+void StackVisualizer::top() const{
+    if(empty()){
+        cout << "\n [Underflow Error] Stack is empty. No top element.\n";
+    } else{
+        cout << "\n Top elemenet: " << values.back() << " (stack unchanged)\n";
+    }
+    cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
+}
+
