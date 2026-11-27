@@ -34,7 +34,7 @@ void ArrayVisualizer::accessAt(int index) const{
         cout << "\n[Bounds Error] Valid indexes are 0 through ";
         return;
     }
-    cout << "\nDirect Access at Index[" << index << "] -> Value: " << values.size() - 1 << ".\n";
+    cout << "\nDirect Access at Index[" << index << "] -> Value: " << values[index]<< ".\n";
     cout << "Time Complexity: O(1) | Auxiliary Space: O(1)\n";
 }
 
