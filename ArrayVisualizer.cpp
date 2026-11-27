@@ -124,3 +124,25 @@ void ArrayVisualizer::removeAt(int index) {
         std::cout << "Complexity: Time O(n) (left shift required) | Auxiliary Space O(1)\n";
     }
 }
+
+void ArrayVisualizer::runMenu(){
+    int choice = 0;
+    while(choice !=6){
+        cout << "\n";
+        need::printDivider();
+        cout << "   ARRAY  /  VECTOR VISUALIZER\n";
+        need::printDivider();
+        cout << "1. Insert at Index\n";
+        cout << "2. Remove at Index\n";
+        cout << "3. Access Element by Index\n";
+        cout << "4. Linear Search by Value\n";
+        cout << "5. Display Array\n";
+        cout << "6. Back to Main Menu\n";
+        need::printDivider();
+
+        choice = need::getValidInt("Choosee a operation (1-6): ", 1, 6);
+        switch (choice){
+            
+        }
+    }
+}
