@@ -82,5 +82,20 @@ void LinkedListVisualizer::insertAt(int index, int value){
     cout << "\n--- BEFORE INSERT AT INDEX " << index << " (" << value << ") ---";
     display();
 
-    
+    Node* previous = head;
+    for(int i = 0; i < index - 1; i++){
+        previous = previous -> next;
+    }
+
+    Node* newNode = new Node{value, previous -> next};
+    previous -> next= newNode;
+    count++;
+
+    cout << "\n[Pointer Update] Reached predecessor (" << previous -> data <<
+    ") -> newNode-> next = previous-next; previous->next = newNode;\n";
+    cout << "--- AFTER INSERT AT INDEX " << index << " (" << value << ") --- ";
+    display();
+    cout << "Complexity: Time O(n) | Auxiliary Space O(1)\n";
 }
+
+void LinkedListVisualizer::removeByValue(int target){}
