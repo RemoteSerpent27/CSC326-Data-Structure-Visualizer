@@ -45,6 +45,24 @@ void LinkedListVisualizer::pushFront(int value){
     cout << "--- AFTER INSERT AT BEGINNING (" << value << ") ---";
     display();
     cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
+}
 
-    
+void LinkedListVisualizer::pushBack(int value){
+    cout << "\n--- BEFORE INSERT AT END(" << value << ") ---";
+    display();
+    Node* newNode = new Node{value, nullptr};
+    if(head == nullptr){
+        head = newNode;
+        cout << "\n[Pointer Update] List was empty -> head = newNode;\n";
+    } else {
+        Node* current = head;
+        int steps = 0;
+        while(current->next != nullptr){
+            current = current -> next;
+            steps++;
+        }
+        current -> next = newNode;
+        cout << "\n[Pointer Update] Traversed " << steps << " link(s) to tail -> tail -> next = newNode;\n";
+    }
+    cout++;
 }
