@@ -3,7 +3,7 @@
 #include "LinkedListVisualizer.h"
 #include "CircularQueueVisualizer.h"
 //command to start: g++ -std=c++17 main.cpp LinkedListVisualizer.cpp CircularQueueVisualizer.cpp -o visualizer && ./visualizer
-//command for terminal Control + `
+//command for terminal: Control + `
 using namespace std;
 
 void runArrayMenu(){
