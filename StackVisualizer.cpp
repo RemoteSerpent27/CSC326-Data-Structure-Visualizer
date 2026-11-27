@@ -148,7 +148,14 @@ void StackVisualizer::runMenu(){
             break;
             case 5: {
                 cout << "Enter expression with brackets (eg {[()]} or  ([)]): )";
+                string expr;
+                getline(cin, expr);
+                checkBalancedDeLimiters(expr);
+                break;
             }
+            case 6:
+            cout << "Returning to Main Menu...\n";
+            break;
         }
     }
 }
