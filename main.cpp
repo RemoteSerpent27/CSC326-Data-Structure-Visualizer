@@ -1,5 +1,6 @@
 #include <iostream>
 #include "need.h"
+#include "LinkedListVisualizer.h"
 #include "CircularQueueVisualizer.h"
 //command to start: g++ -std=c++17 main.cpp CircularQueueVisualizer.cpp -o visualizer && ./visualizer
 //command for terminal Control + `
@@ -18,6 +19,7 @@ void runStackMenu(){
 }
 
 int main(){
+    LinkedListVisualizer listViz;
     CircularQueueVisualizer queueVis(5);
     int choice = 0;
 
@@ -35,7 +37,7 @@ int main(){
         choice = need::getValidInt("Select a option(1-5): ", 1, 5);
         switch(choice){
             case 1: runArrayMenu(); break;
-            case 2: runLinkedList(); break;
+            case 2: listViz.runMenu(); break;
             case 3: runStackMenu(); break;
             case 4: queueVis.runMenu(); break;
             case 5: cout << "Exiting, Goodbye." << endl; break;
