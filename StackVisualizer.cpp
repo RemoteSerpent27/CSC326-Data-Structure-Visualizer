@@ -29,3 +29,28 @@ void StackVisualizer::display() const{
     }
 }
 
+void StackVisualizer::push(int value){
+    cout << "\n-- BEFORE PUSH(" << value << ") ---";
+    display();
+    values.push_back(value);
+    cout << "\n[Step] Pushed " << value << " onto top of stack.\n";
+    cout << "-- AFTER PUSH(" << value << ") ---";
+    display();
+    cout << "Complexity: Time O(1) amortized | Auxiliary Space O(1)\n";
+}
+
+void StackVisualizer::pop(){
+    cout << "\n-- BEFORE POP() ---";
+    display();
+
+    if(empty()){
+        cout << "\n [Underflow Error] Stack is empty. Nothing to pop.\n";
+        cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
+        return;
+    }
+    int removedVal = values.back();
+    values.pop_back();
+
+    cout << "\n[Step] Popped " << removedVal << " from top of stack.\n";
+    cout << "--- AFTER POP() ---";
+}
