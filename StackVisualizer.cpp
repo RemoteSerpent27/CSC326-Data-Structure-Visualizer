@@ -66,3 +66,50 @@ void StackVisualizer::top() const{
     cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
 }
 
+void StackVisualizer::checkBalancedDeLimiters(const std::string& expression) const {
+    cout << "\n--- BALANCED DELIMITERS CHECK: \"" << expression << "\" ---\n";
+    vector<char> charStack;
+
+    auto printCharStack = [&charStack]() {
+        std::cout << "Stack (bottom -> top): [ ";
+        for (char ch : charStack) cout << ch << " ";
+        cout << "]\n";
+    };
+
+    for (char c : expression) {
+        if (c == '(' || c == '[' || c == '{') {
+            charStack.push_back(c);
+            cout << "Read '" << c << "' -> Push opening delimiter. ";
+            printCharStack();
+        } else if (c == ')' || c == ']' || c == '}') {
+            if (charStack.empty()) {
+                cout << "Read '" << c << "' -> [FAIL] Stack is empty (premature closing delimiter).\n";
+                cout << "Result: UNBALANCED\n";
+                cout << "Complexity: Time O(n) | Auxiliary Space O(n)\n";
+                return;
+            }
+            char openTop = charStack.back();
+            bool matches = (openTop == '(' && c == ')') ||
+                           (openTop == '[' && c == ']') ||
+                           (openTop == '{' && c == '}');
+            if (!matches) {
+                cout << "Read '" << c << "' -> [FAIL] Top is '" << openTop << "', expected matching pair.\n";
+                cout << "Result: UNBALANCED\n";
+                cout << "Complexity: Time O(n) | Auxiliary Space O(n)\n";
+                return;
+            }
+            charStack.pop_back();
+            cout << "Read '" << c << "' -> Matches '" << openTop << "', pop top. ";
+            printCharStack();
+        }
+    }
+
+    if (charStack.empty()) {
+        cout << "End of expression -> Stack is empty.\n";
+        std::cout << "Result: BALANCED\n";
+    } else {
+        cout << "End of expression -> [FAIL] Unclosed opening delimiter(s) remain.\n";
+        cout << "Result: UNBALANCED\n";
+    }
+    cout << "Complexity: Time O(n) | Auxiliary Space O(n)\n";
+}
