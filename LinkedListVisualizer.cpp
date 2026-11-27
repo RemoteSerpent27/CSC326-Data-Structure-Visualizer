@@ -64,5 +64,23 @@ void LinkedListVisualizer::pushBack(int value){
         current -> next = newNode;
         cout << "\n[Pointer Update] Traversed " << steps << " link(s) to tail -> tail -> next = newNode;\n";
     }
-    cout++;
+    count++;
+    cout <<"--- AFTER INSERT AT END(" << value << ") ---";
+    display();
+    cout << "Complexity: Time O(n) (head - only representation) | Auxiliary Space O(1)\n";
+}
+
+void LinkedListVisualizer::insertAt(int index, int value){
+    if(index < 0  || index > count){
+        cout << "\n[Bounds Error] Valid insertion inexes are 0 throuhg " << count << ".\n";
+        return;
+    }
+    if(index == 0){
+        pushFront(value);
+        return;
+    }
+    cout << "\n--- BEFORE INSERT AT INDEX " << index << " (" << value << ") ---";
+    display();
+
+    
 }
