@@ -143,9 +143,9 @@ void ArrayVisualizer::runMenu(){
         choice = need::getValidInt("Choosee a operation (1-6): ", 1, 6);
         switch (choice){
             case 1: {
-                int idx = Utils::getValidInt("Enter index (0 to " + std::to_string(values.size()) + "): ",
+                int idx = need::getValidInt("Enter index (0 to " + std::to_string(values.size()) + "): ",
                                              0, static_cast<int>(values.size()));
-                int val = Utils::getAnyInt("Enter integer value to insert: ");
+                int val = need::getAnyInt("Enter integer value to insert: ");
                 insertAt(idx, val);
                 break;
             }
@@ -153,7 +153,7 @@ void ArrayVisualizer::runMenu(){
                 if (values.empty()) {
                     std::cout << "\n[Underflow Error] Array is empty. Nothing to remove.\n";
                 } else {
-                    int idx = Utils::getValidInt("Enter index (0 to " + std::to_string(values.size() - 1) + "): ",
+                    int idx = need::getValidInt("Enter index (0 to " + std::to_string(values.size() - 1) + "): ",
                                                  0, static_cast<int>(values.size() - 1));
                     removeAt(idx);
                 }
@@ -163,14 +163,14 @@ void ArrayVisualizer::runMenu(){
                 if (values.empty()) {
                     std::cout << "\n[Underflow Error] Array is empty.\n";
                 } else {
-                    int idx = Utils::getValidInt("Enter index (0 to " + std::to_string(values.size() - 1) + "): ",
+                    int idx = need::getValidInt("Enter index (0 to " + std::to_string(values.size() - 1) + "): ",
                                                  0, static_cast<int>(values.size() - 1));
                     accessAt(idx);
                 }
                 break;
             }
             case 4: {
-                int val = Utils::getAnyInt("Enter integer value to search: ");
+                int val = need::getAnyInt("Enter integer value to search: ");
                 search(val);
                 break;
             }
