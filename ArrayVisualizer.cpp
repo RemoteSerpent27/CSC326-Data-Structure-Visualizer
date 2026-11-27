@@ -140,7 +140,7 @@ void ArrayVisualizer::runMenu(){
         cout << "6. Back to Main Menu\n";
         need::printDivider();
 
-        choice = need::getValidInt("Choosee a operation (1-6): ", 1, 6);
+        choice = need::getValidInt("Chosee an operation (1-6): ", 1, 6);
         switch (choice){
             case 1: {
                 int idx = need::getValidInt("Enter index (0 to " + std::to_string(values.size()) + "): ",
