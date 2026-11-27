@@ -188,5 +188,39 @@ void LinkedListVisualizer::runMenu() {
         need::printDivider();
 
         choice = need::getValidInt("Choose an operation (1-7): ", 1, 7);
+        switch(choice){
+            case 1: {
+                int val = need::getAnyInt("Enter integer value to insert at beginnign: ");
+                pushBack(val);
+                break;
+            }
+            case 2: {
+                int val = need::getAnyInt("Enter integer value to insert at end: ");
+                pushBack(val);
+                break;
+            }
+            case 3: {
+                int idx = need::getValidInt("Enter index (0 to " + std::to_string(count) + "): ", 0, count);
+                int val = need::getAnyInt("Enter integer value to insert: ");
+                insertAt(idx, val);
+                break;
+            }
+            case 4: {
+                int val = need::getAnyInt("Enter integer value to delete: ");
+                removeByValue(val);
+                break;
+            }
+            case 5: {
+                int val = need::getAnyInt("Enter integer value to search ");
+                search(val);
+                break;
+            }
+            case 6:
+            display();
+            break;
+            case 7:
+            cout << "Returning to Main Menu...\n";
+            break;
+        }
     }
 }
