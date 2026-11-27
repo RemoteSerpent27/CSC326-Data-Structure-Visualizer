@@ -21,3 +21,8 @@ bool LinkedListVisualizer::empty() const {
 int LinkedListVisualizer::size() const{
     return count;
 }
+
+void LinkedListVisualizer::display() const{
+    cout<<"\nLinked List State(size = " << count << "):\n";
+    cout << "head -> ";
+}
