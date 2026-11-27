@@ -21,11 +21,11 @@ void StackVisualizer::display() const{
         return;
     }
     for(int i = static_cast<int>(values.size()) - 1; i >= 0; i--){
-        cout << " | " << setw(5) << values[i] << " |";
+        cout << "  | " << setw(5) << values[i] << " |";
         if (i == static_cast<int>(values.size()) - 1){
             cout << "  <-- TOP";
         }
-        cout << "\n  +-----+\n";
+        cout << "\n  +-------+\n";
     }
 }
 
