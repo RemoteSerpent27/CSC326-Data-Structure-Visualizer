@@ -92,7 +92,7 @@ void LinkedListVisualizer::insertAt(int index, int value){
     count++;
 
     cout << "\n[Pointer Update] Reached predecessor (" << previous -> data <<
-    ") -> newNode-> next = previous-next; previous->next = newNode;\n";
+    ") -> newNode-> next = previous->next; previous->next = newNode;\n";
     cout << "--- AFTER INSERT AT INDEX " << index << " (" << value << ") --- ";
     display();
     cout << "Complexity: Time O(n) | Auxiliary Space O(1)\n";
@@ -191,7 +191,7 @@ void LinkedListVisualizer::runMenu() {
         switch(choice){
             case 1: {
                 int val = need::getAnyInt("Enter integer value to insert at beginnign: ");
-                pushBack(val);
+                pushFront(val);
                 break;
             }
             case 2: {
