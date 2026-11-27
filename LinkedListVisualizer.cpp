@@ -147,3 +147,46 @@ void LinkedListVisualizer::removeByValue(int target){
     display();
     cout << "Complexity: Time O(n) | Auxiliary Space O(1)\n";
 }
+void LinkedListVisualizer::search(int target) const {
+    std::cout << "\n--- SEARCHING FOR " << target << " ---";
+    display();
+
+    Node* current = head;
+    int index = 0;
+    cout << "Traversal Trace: ";
+
+    while (current != nullptr) {
+        std::cout << "[" << current->data << "]";
+        if (current->data == target) {
+            cout << " -> MATCH FOUND at index " << index << "!\n";
+            cout << "Complexity: Time O(n) | Auxiliary Space O(1)\n";
+            return;
+        }
+        cout << " -> ";
+        current = current->next;
+        ++index;
+    }
+
+    cout << "nullptr -> NOT FOUND (returned nullptr).\n";
+    cout << "Complexity: Time O(n) | Auxiliary Space O(1)\n";
+}
+
+void LinkedListVisualizer::runMenu() {
+    int choice = 0;
+    while (choice != 7) {
+        cout << "\n";
+        need::printDivider();
+        cout << "   SINGLY LINKED LIST VISUALIZER\n";
+        need::printDivider();
+        cout << "1. Insert at Beginning (pushFront)\n";
+        cout << "2. Insert at End (pushBack)\n";
+        cout << "3. Insert at Position (Index)\n";
+        cout << "4. Delete by Value\n";
+        cout << "5. Search for Value\n";
+        cout << "6. Display Linked List\n";
+        cout << "7. Back to Main Menu\n";
+        need::printDivider();
+
+        choice = need::getValidInt("Choose an operation (1-7): ", 1, 7);
+    }
+}
