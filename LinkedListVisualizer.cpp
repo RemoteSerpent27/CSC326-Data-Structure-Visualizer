@@ -101,27 +101,23 @@ void LinkedListVisualizer::insertAt(int index, int value){
 void LinkedListVisualizer::removeByValue(int target){
     std::cout << "\n--- BEFORE DELETE BY VALUE (" << target << ") ---";
     display();
-
     if (head == nullptr) {
         cout << "\n[Underflow Error] List is empty (head == nullptr). Nothing to delete.\n";
         cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
         return;
     }
-
     // Special case: removing head node
     if (head->data == target) {
         Node* removed = head;
         head = head->next;
         delete removed;
         --count;
-
         cout << "\n[Pointer Update] Target at head -> removed = head; head = head->next; delete removed;\n";
         cout << "--- AFTER DELETE BY VALUE (" << target << ") ---";
         display();
         cout << "Complexity: Time O(1) | Auxiliary Space O(1)\n";
         return;
     }
-
     // Search for target with previous and current pointers
     Node* previous = head;
     Node* current = head->next;
@@ -129,20 +125,16 @@ void LinkedListVisualizer::removeByValue(int target){
         previous = current;
         current = current->next;
     }
-
     if (current == nullptr) {
         cout << "\n[Not Found] Value " << target << " is not in the list. No links changed.\n";
         cout << "Complexity: Time O(n) | Auxiliary Space O(1)\n";
         return;
     }
-
     Node* removed = current;
     previous->next = current->next;
     delete removed;
     --count;
-
-    cout << "\n[Pointer Update] Saved removed = current (" << target
-              << ") -> previous->next = current->next; delete removed;\n";
+    cout << "\n[Pointer Update] Saved removed = current (" << target  << ") -> previous->next = current->next; delete removed;\n";
     cout << "--- AFTER DELETE BY VALUE (" << target << ") ---";
     display();
     cout << "Complexity: Time O(n) | Auxiliary Space O(1)\n";
